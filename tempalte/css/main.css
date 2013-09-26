@@ -1,0 +1,60 @@
+body {margin-top: 70px;}
+h1 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+.wp_teamer_name {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4);
+    bottom: 20px;
+    color: #FFFFFF;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 1px #333333;
+    width: 100%;
+}
+
+.container .jumbotron {
+ border-radius: 0px;
+}
+
+.thumb {
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: #9d261d
+}
+
+.topnav > li > a {
+  text-transform: uppercase;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .topnav > li > a {
+    font-size: 11px;
+  }
+}
+
+@media screen and ( min-width: 992px ) {
+  .topnav > li > a {
+    font-size: 14px;
+  }
+}
+
+@media screen and ( min-width: 1200px ) {
+  .topnav > li > a {
+    font-size: 14px;
+  }
+}
+
