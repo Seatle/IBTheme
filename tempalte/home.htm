@@ -16,8 +16,9 @@
 <link href='http://fonts.googleapis.com/css?family=Comfortaa:700&subset=cyrillic' rel='stylesheet' type='text/css'>
     <style>
     body {margin-top: 70px;}
-    h1 {font-family: 'Comfortaa', cursive; font-size: 28px; text-transform: uppercase;}
+    h1 {font-family: 'Comfortaa', cursive; font-size: 18px; text-transform: uppercase;}
     .navbar {margin-bottom: 0px;border-radius: 0px;}
+
     .container .jumbotron { border-radius: 0px;}
     .thumb {margin-bottom: 30px;}
     footer {background-color: #9d261d}
@@ -25,7 +26,7 @@
     {
       text-transform: uppercase;
       font-family: 'Comfortaa', cursive;
-      font-size: 21px;
+      font-size: 18px;
     }
     </style>
 
@@ -47,8 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    
-                    
+                    <a class="navbar-brand hidden-sm" href="#"><i class="glyphicon glyphicon-home"></i></a>
                 </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -56,6 +56,7 @@
                     <!--<a class="navbar-brand" href="index.html"><i class="glyphicon glyphicon-home"></i></a>-->
                     <ul class="nav navbar-nav topnav">
                         <li class="active"><a href="#about">Платья</a></li>
+                        <li class="divider-vertical">
                         <li><a href="#">Сарафаны</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Костюмы</a></li>
@@ -65,9 +66,14 @@
                         <li><a href="#">Пальто</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right visible-lg visible-xs">
                         <li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i> Корзина</a></li>
                         <li><a href="#"><i class="glyphicon glyphicon-user"></i> Вход</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right visible-md">
+                        <li><a href="#"><i class="glyphicon glyphicon-shopping-cart"></i></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
                     </ul>
 
                 </div><!-- /.navbar-collapse -->
