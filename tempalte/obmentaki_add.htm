@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Starter Template for Bootstrap</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Add custom CSS here -->
+
+	<link href="css/main.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa&subset=cyrillic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/upload.js"></script>
+
+	<style type="text/css">
+
+	.clearfix {
+		*zoom: 1;
+	}
+	.clearfix:before,
+	.clearfix:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	.clearfix:after {
+		clear: both;
+	}
+	.hide-text {
+		font: 0/0 a;
+		color: transparent;
+		text-shadow: none;
+		background-color: transparent;
+		border: 0;
+	}
+	.input-block-level {
+		display: block;
+		width: 100%;
+		min-height: 30px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.btn-file {
+		overflow: hidden;
+		position: relative;
+		vertical-align: middle;
+	}
+	.btn-file > input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		opacity: 0;
+		filter: alpha(opacity=0);
+		transform: translate(-300px, 0) scale(4);
+		font-size: 23px;
+		direction: ltr;
+		cursor: pointer;
+	}
+	.fileupload {
+		margin-bottom: 9px;
+	}
+	.fileupload .uneditable-input {
+		display: inline-block;
+		margin-bottom: 0px;
+		vertical-align: middle;
+		cursor: text;
+	}
+	.fileupload .thumbnail {
+		overflow: hidden;
+		display: inline-block;
+		margin-bottom: 5px;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.fileupload .thumbnail > img {
+		display: inline-block;
+		vertical-align: middle;
+		max-height: 100%;
+	}
+	.fileupload .btn {
+		vertical-align: middle;
+	}
+	.fileupload-exists .fileupload-new,
+	.fileupload-new .fileupload-exists {
+		display: none;
+	}
+	.fileupload-inline .fileupload-controls {
+		display: inline;
+	}
+	.fileupload-new .input-group .btn-file {
+		-webkit-border-radius: 0 3px 3px 0;
+		-moz-border-radius: 0 3px 3px 0;
+		border-radius: 0 3px 3px 0;
+	}
+	.thumbnail-borderless .thumbnail {
+		border: none;
+		padding: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+	}
+	.fileupload-new.thumbnail-borderless .thumbnail {
+		border: 1px solid #ddd;
+	}
+	.control-group.warning .fileupload .uneditable-input {
+		color: #a47e3c;
+		border-color: #a47e3c;
+	}
+	.control-group.warning .fileupload .fileupload-preview {
+		color: #a47e3c;
+	}
+	.control-group.warning .fileupload .thumbnail {
+		border-color: #a47e3c;
+	}
+	.control-group.error .fileupload .uneditable-input {
+		color: #b94a48;
+		border-color: #b94a48;
+	}
+	.control-group.error .fileupload .fileupload-preview {
+		color: #b94a48;
+	}
+	.control-group.error .fileupload .thumbnail {
+		border-color: #b94a48;
+	}
+	.control-group.success .fileupload .uneditable-input {
+		color: #468847;
+		border-color: #468847;
+	}
+	.control-group.success .fileupload .fileupload-preview {
+		color: #468847;
+	}
+	.control-group.success .fileupload .thumbnail {
+		border-color: #468847;
+	}
+
+
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="container">
+
+
+
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="inputEmail1" class="col-lg-2 control-label">Заголовок:</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="inputEmail1" placeholder="например Samsung Galaxy S4">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputPassword1" class="col-lg-2 control-label">Категория:</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="inputPassword1" placeholder="начни вводить название категории, например 'Смартфоны'">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputTags" class="col-lg-2 control-label">Ключевые слова:</label>
+				<div class="col-lg-10">
+					<input type="text" class="form-control" id="inputTags" placeholder="введи слова для поиска через запятую">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputPrice" class="col-lg-2 control-label">Цена:</label>
+				<div class="col-lg-2">
+					<input type="text" class="form-control" id="inputPrice" placeholder="">
+				</div>
+			</div>
+
+			<div  class="form-group">
+				<label for="inputPrice" class="col-lg-2 control-label">Фото:</label>
+
+				<div class="fileupload fileupload-new col-lg-2" data-provides="fileupload">
+					<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+					<div>
+						<span class="btn btn-default btn-file">
+							<span class="fileupload-new">Select image</span>
+							<span class="fileupload-exists">Change</span>
+							<input type="file" name="itempic">
+						</span>
+						<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+					</div>
+				</div>
+				<div class="fileupload fileupload-new col-lg-2" data-provides="fileupload">
+					<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+					<div>
+						<span class="btn btn-default btn-file">
+							<span class="fileupload-new">Select image</span>
+							<span class="fileupload-exists">Change</span>
+							<input type="file" name="itempic">
+						</span>
+						<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+					</div>
+				</div>
+				<div class="fileupload fileupload-new col-lg-2" data-provides="fileupload">
+					<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+					<div>
+						<span class="btn btn-default btn-file">
+							<span class="fileupload-new">Select image</span>
+							<span class="fileupload-exists">Change</span>
+							<input type="file" name="itempic">
+						</span>
+						<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+					</div>
+				</div>
+				<div class="fileupload fileupload-new col-lg-2" data-provides="fileupload">
+					<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+					<div>
+						<span class="btn btn-default btn-file">
+							<span class="fileupload-new">Select image</span>
+							<span class="fileupload-exists">Change</span>
+							<input type="file" name="itempic">
+						</span>
+						<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+					</div>
+				</div>
+				<div class="fileupload fileupload-new col-lg-2" data-provides="fileupload">
+					<div class="fileupload-preview thumbnail" style="width: 200px; height: 150px;"></div>
+					<div>
+						<span class="btn btn-default btn-file">
+							<span class="fileupload-new">Select image</span>
+							<span class="fileupload-exists">Change</span>
+							<input type="file" name="itempic">
+						</span>
+						<a href="#" class="btn btn-default fileupload-exists" data-dismiss="fileupload">Remove</a>
+					</div>
+				</div>
+			</div>
+
+		<div class="form-group">
+			<label for="inputTags" class="col-lg-2 control-label">Примечание:</label>
+			<div class="col-lg-10">
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+		</div>
+
+
+		<div class="form-group">
+			<div class="col-lg-offset-2 col-lg-10">
+				<button type="submit" class="btn btn-default">Отправить</button>
+			</div>
+		</div>
+	</form>
+
+
+</div>
