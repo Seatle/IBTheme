@@ -21,6 +21,66 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/bootstrap-fileupload.min.js"></script>
+
+	<script type="text/javascript">
+
+	$(document).ready(function () {
+	    $.get('http://jsonip.com', function (res) {
+
+	        //$('#yourip').html(res.ip);
+	        //89.107.39.118
+	        var ipgeo = 'http://ipgeobase.ru:7020/geo?ip=';
+
+	        $.get(ipgeo.concat(res.ip), function(xml) {
+
+ 				$(xml).find("ip").each(
+ 					function () {
+						var country = $(this).find("country").text();
+ 						var city = $(this).find("city").text();
+ 						var region = $(this).find("region").text();
+						
+ 						//$('#ipg_content').html(country + ' ' + region  + ' ' + city);
+ 						$('#region').val(country + ' ' + region  + ' > ' + city)
+
+ 					});
+
+	        	
+	    	});
+
+	    });
+
+
+	    
+
+	});
+
+
+
+// 	$(function () {
+//     jQuery(document).ready(function () {
+//         jQuery.ajax({
+//             type: “GET”,
+//             url: “http://ipgeobase.ru:7020/geo?ip=89.107.39.118″,
+//             dataType: “xml”,
+//             success: function (xml) {
+//                 jQuery(xml).find(’ip’).each(
+//                     function () {
+//                         var city = jQuery(this).find(’city’).text(),
+//                             region = jQuery(this).find(’region’).text();
+//                         if (city != region) {
+//                             ipg = city + ”, “+region;
+//                         } else {
+//                             ipg = city;
+//                         }
+//                         $(’#ipg_content’).html(ipg);
+//                     });
+//             }
+//         });
+//     });
+// });
+
+	</script>
+
 </head>
 
 <body>
@@ -43,6 +103,15 @@
 				<label for="inputPassword1" class="col-lg-2 control-label">Категория:</label>
 				<div class="col-lg-10">
 					<input type="text" class="form-control" id="inputPassword1" placeholder="начни вводить название категории, например 'Смартфоны'">
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="inputPassword1" class="col-lg-2 control-label">Регион:</label>
+				<div class="col-lg-10">
+					<p id="yourip"></p>
+					<p id="ipg_content"></p>
+					<input type="text" id="region" class="form-control" id="inputPassword1" placeholder="">
 				</div>
 			</div>
 
